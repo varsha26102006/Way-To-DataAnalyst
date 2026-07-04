@@ -1,0 +1,56 @@
+import sqlite3
+conn = sqlite3.connect("college.db")
+cursor = conn.cursor()
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Students (
+    StudentID INTEGER PRIMARY KEY,
+    Name TEXT,
+    Age INTEGER,
+    Department TEXT
+)
+""")
+
+conn.commit()
+cursor.execute("""
+INSERT INTO Students
+VALUES (1, 'Varsha', 20, 'IT')
+""")
+
+conn.commit()
+cursor.execute("SELECT * FROM Students")
+
+rows = cursor.fetchall()
+
+for row in rows:
+    print(row)
+
+OUTPUT:
+
+(1, 'Varsha', 20, 'IT')
+
+cursor.execute("""
+UPDATE Students
+SET Age = 21
+WHERE StudentID = 1
+""")
+
+conn.commit()
+
+conn.close()
+
+import pandas as pd
+
+conn = sqlite3.connect("college.db")
+
+df = pd.read_sql_query("SELECT * FROM Students", conn)
+
+df
+
+OUTPUT:
+
+
+     StudentID	Name	Age	Department
+
+0	1	Varsha	21	IT
+
+
