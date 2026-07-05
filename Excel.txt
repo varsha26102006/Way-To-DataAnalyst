@@ -1,0 +1,256 @@
+1. Formatting
+
+What is Formatting?
+
+Formatting means changing the appearance of your data to make it neat and easy to read.
+
+Example
+
+Before Formatting
+
+name	age	department
+varsha	20	it
+
+After Formatting
+
+Name	Age	Department
+Varsha	20	IT
+What you can do
+Change font
+Increase font size
+Make text Bold
+Italic
+Underline
+Change text color
+Fill cell color
+Add borders
+Center or align text
+Format numbers, dates, currency, percentages
+Example
+Before	After
+1000	₹1,000
+0.75	75%
+12/5/25	12-May-2025
+2. Tables
+What is a Table?
+
+A table is a structured range of data with headers.
+
+Normal Data
+Name	Age	Department
+Varsha	20	IT
+Priya	19	CSE
+Convert to Table
+
+Select data
+
+Press
+
+Ctrl + T
+
+or
+
+Insert → Table
+
+Excel automatically adds:
+
+Filter buttons
+Alternate row colors
+Easy sorting
+Structured references
+Advantages
+
+✅ Easy filtering
+
+✅ Easy sorting
+
+✅ Auto formatting
+
+✅ Automatically expands when new rows are added
+
+3. Sorting
+What is Sorting?
+
+Sorting arranges data in ascending or descending order.
+
+Example
+
+Before
+
+Name	Marks
+Rahul	70
+Varsha	95
+Arun	80
+Sort Small → Large
+Name	Marks
+Rahul	70
+Arun	80
+Varsha	95
+Sort Large → Small
+Name	Marks
+Varsha	95
+Arun	80
+Rahul	70
+Excel Steps
+
+Select table
+
+Home
+
+↓
+
+Sort & Filter
+
+↓
+
+Choose
+
+A → Z
+Z → A
+
+or
+
+Data
+
+↓
+
+Sort
+
+4. Filtering
+What is Filtering?
+
+Filtering displays only the data you want while hiding the rest.
+
+Example
+Name	Department
+Varsha	IT
+Priya	CSE
+Rahul	IT
+
+If you filter
+
+Department = IT
+
+Output
+
+Name	Department
+Varsha	IT
+Rahul	IT
+
+Priya is hidden but not deleted.
+
+Excel Steps
+
+Data
+
+↓
+
+Filter
+
+↓
+
+Click ▼
+
+↓
+
+Select IT
+
+5. Freeze Panes
+What is Freeze Panes?
+
+Freeze Panes keeps important rows or columns visible while you scroll.
+
+Suppose your data has 10,000 rows.
+
+When you scroll down,
+
+you can't see
+
+| Name | Age | Department |
+
+Freeze Panes keeps these headers visible.
+
+Excel Steps
+
+View
+
+↓
+
+Freeze Panes
+
+↓
+
+Freeze Top Row
+
+Now the first row remains visible.
+
+You can also freeze
+
+First Column
+Both Rows and Columns
+6. Conditional Formatting
+What is Conditional Formatting?
+
+Conditional Formatting changes the color or style of cells based on rules.
+
+Example
+
+Marks
+
+Student	Marks
+Varsha	95
+Rahul	60
+Arun	85
+
+Suppose we say
+
+Marks > 90
+
+Make Green
+
+Output
+
+Student	Marks
+Varsha	🟩95
+Rahul	60
+Arun	85
+
+Another Example
+
+Marks < 70
+
+Make Red
+
+Student	Marks
+Varsha	95
+Rahul	🟥60
+Arun	85
+Excel Steps
+
+Select cells
+
+↓
+
+Home
+
+↓
+
+Conditional Formatting
+
+↓
+
+Highlight Cells Rules
+
+↓
+
+Greater Than
+
+↓
+
+Enter
+
+90
+
+↓
+
+Choose Green Fill
