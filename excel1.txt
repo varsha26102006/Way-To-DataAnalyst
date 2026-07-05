@@ -1,0 +1,224 @@
+Sample Data
+A (Name)	B (Department)	C (Marks)
+Varsha	IT	95
+Priya	CSE	88
+Rahul	IT	82
+Arun	ECE	75
+Anjali	CSE	91
+1. SUM()
+Purpose
+
+Adds numbers together.
+
+Formula
+=SUM(C2:C6)
+Output
+
+95 + 88 + 82 + 75 + 91 = 431
+
+2. AVERAGE()
+Purpose
+
+Finds the average.
+
+Formula
+=AVERAGE(C2:C6)
+Output
+
+431 ÷ 5 = 86.2
+
+3. COUNT()
+Purpose
+
+Counts cells containing numbers.
+
+Formula
+=COUNT(C2:C6)
+Output
+
+5
+
+4. IF()
+Purpose
+
+Checks a condition and returns one value if TRUE and another if FALSE.
+
+Example
+
+Pass if marks are 80 or more.
+
+=IF(C2>=80,"Pass","Fail")
+Output
+Marks	Result
+95	Pass
+75	Fail
+5. IFS()
+Purpose
+
+Checks multiple conditions.
+
+Formula
+=IFS(
+C2>=90,"A Grade",
+C2>=80,"B Grade",
+C2>=70,"C Grade",
+TRUE,"Fail"
+)
+Output
+Marks	Grade
+95	A Grade
+88	B Grade
+75	C Grade
+6. COUNTIF()
+Purpose
+
+Counts cells that meet a condition.
+
+Example
+
+Count IT students.
+
+=COUNTIF(B2:B6,"IT")
+Output
+
+2
+
+7. SUMIF()
+Purpose
+
+Adds values that meet a condition.
+
+Example
+
+Total marks of IT students.
+
+=SUMIF(B2:B6,"IT",C2:C6)
+Output
+
+95 + 82 = 177
+
+8. VLOOKUP()
+Purpose
+
+Looks for a value in the first column and returns a value from another column.
+
+Example
+A	B
+101	Varsha
+102	Priya
+
+Find the name for ID 102.
+
+=VLOOKUP(102,A2:B3,2,FALSE)
+Output
+
+Priya
+
+9. XLOOKUP()
+Purpose
+
+A newer, more flexible replacement for VLOOKUP().
+
+Formula
+=XLOOKUP(102,A2:A3,B2:B3)
+Output
+
+Priya
+
+Why XLOOKUP?
+Looks left or right.
+Doesn't require a column number.
+Easier to use than VLOOKUP().
+10. INDEX + MATCH()
+Purpose
+
+Another powerful way to look up values.
+
+Formula
+=INDEX(B2:B6,MATCH(102,A2:A6,0))
+Output
+
+Returns the name that matches ID 102.
+
+Many companies still ask about INDEX + MATCH because it's flexible and works well with changing tables.
+
+11. TEXT()
+Purpose
+
+Formats numbers or dates as text.
+
+Example
+
+If A1 contains:
+
+05/07/2026
+
+Formula:
+
+=TEXT(A1,"dd-mmm-yyyy")
+Output
+05-Jul-2026
+12. LEFT()
+Purpose
+
+Returns characters from the beginning of text.
+
+Example
+DataScience
+
+Formula
+
+=LEFT(A1,4)
+Output
+Data
+13. RIGHT()
+Purpose
+
+Returns characters from the end.
+
+Formula
+=RIGHT(A1,7)
+Output
+Science
+14. MID()
+Purpose
+
+Returns characters from the middle.
+
+Formula
+=MID(A1,5,7)
+Output
+Science
+
+Syntax:
+
+=MID(text, start_position, number_of_characters)
+15. CONCAT()
+Purpose
+
+Joins text together.
+
+Suppose:
+
+A	B
+Varsha	M
+
+Formula
+
+=CONCAT(A2," ",B2)
+Output
+Varsha M
+16. TRIM()
+Purpose
+
+Removes extra spaces.
+
+Example
+
+"   Varsha     M   "
+
+Formula
+
+=TRIM(A1)
+Output
+Varsha M
