@@ -1,0 +1,249 @@
+Phase 1 Basics (Week 1)
+
+Learn how Power BI works.
+
+1. Install Power BI Desktop
+Download and install
+Understand the interface
+Report View
+Data View
+Model View
+2. Import Data
+
+Practice importing data from
+
+Excel (.xlsx)
+CSV (.csv)
+SQL Database (MySQLSQL Server)
+
+Practice
+
+Import an Excel sales file.
+Import a CSV file from Kaggle.
+Connect to your SQL database and load a table.
+Phase 2 Data Cleaning (Week 1–2)
+
+Most real-world data is messy. Power Query is used to clean it before creating reports.
+
+Power Query
+
+Learn how to open Transform Data.
+
+Remove Nulls
+
+Example
+
+Name	Sales
+Rahul	200
+Kiran	Null
+
+Remove or replace the null value.
+
+Merge Columns
+
+Before
+
+First Name	Last Name
+Rahul	Kumar
+
+After
+
+Full Name
+Rahul Kumar
+Split Columns
+
+Before
+
+Rahul Kumar
+
+Split by space.
+
+After
+
+First	Last
+Rahul	Kumar
+Replace Values
+
+Replace
+
+TN
+
+with
+
+Tamil Nadu
+
+or
+
+Replace
+
+Male
+
+with
+
+M
+Phase 3 Data Modeling (Week 2)
+
+This is one of the most important Power BI concepts.
+
+Relationships
+
+Connect tables using common columns.
+
+Example
+
+Customers
+
+CustomerID	Name
+101	Rahul
+
+Sales
+
+CustomerID	Amount
+101	500
+
+Create a relationship
+
+Customers.CustomerID
+        ↓
+Sales.CustomerID
+Star Schema ⭐⭐⭐⭐⭐
+
+A professional data model.
+
+          Products
+              
+Customers ---- Sales ---- Calendar
+              
+          Locations
+Sales = Fact Table
+Customers = Dimension
+Products = Dimension
+Calendar = Dimension
+
+This makes reports faster and easier to maintain.
+
+Calendar Table
+
+A special table containing dates.
+
+Example
+
+Date
+01-01-2026
+02-01-2026
+03-01-2026
+
+Used for
+
+Year
+Month
+Quarter
+Week
+Time Intelligence
+Phase 4 DAX (Week 3)
+
+DAX is the formula language used in Power BI.
+
+SUM
+
+Adds values.
+
+Total Sales = SUM(Sales[Sales])
+COUNT
+
+Counts rows.
+
+Orders = COUNT(Sales[OrderID])
+DISTINCTCOUNT
+
+Counts unique values.
+
+Customers = DISTINCTCOUNT(Sales[CustomerID])
+CALCULATE ⭐⭐⭐⭐⭐
+
+Changes the filter context.
+
+Example
+
+South Sales =
+CALCULATE(
+SUM(Sales[Sales]),
+Sales[Region]=South
+)
+FILTER
+
+Filters rows.
+
+FILTER(
+Sales,
+Sales[Sales]500
+)
+IF
+Profit Status =
+IF(
+Sales[Profit]0,
+Profit,
+Loss
+)
+SWITCH
+
+Works like multiple IF statements.
+
+Grade =
+SWITCH(
+TRUE(),
+Sales[Sales]1000,High,
+Sales[Sales]500,Medium,
+Low
+)
+RANKX
+
+Ranks values.
+
+Rank =
+RANKX(
+ALL(Sales),
+SUM(Sales[Sales])
+)
+
+Example
+
+Product	Sales	Rank
+A	900	1
+B	800	2
+C	500	3
+Time Intelligence ⭐⭐⭐⭐⭐
+
+Very important in interviews.
+
+Examples
+
+Year-to-Date (YTD)
+Month-to-Date (MTD)
+Previous Month Sales
+Previous Year Sales
+Year-over-Year (YoY)
+Quarter-to-Date (QTD)
+
+Example
+
+YTD Sales =
+TOTALYTD(
+SUM(Sales[Sales]),
+Calendar[Date]
+)
+Phase 5 Visualizations (Week 4)
+
+Learn when to use each visual.
+
+Visualization	Purpose
+Card	Show a single KPI like Total Sales or Profit
+KPI	Compare current value with a target or previous period
+Line Chart	Show trends over time (Sales by Month)
+Bar Chart	Compare categories (Sales by Product, Region, Customer)
+Matrix	Interactive pivot table with drill-down
+Table	Display detailed records and values
+Map	Show geographic data such as Sales by State or City
+Treemap	Compare category sizes using nested rectangles
+Donut Chart	Show percentage contribution of categories
+Slicers	Add interactive filters (Date, Region, Category, etc.)
